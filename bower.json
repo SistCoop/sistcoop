@@ -11,6 +11,7 @@
     "angular-bootstrap": "0.12.1",
     "angular-ui-router": "#master",
     "web-bootstrap": "./node_modules/meanio/resources/web-bootstrap.js",
-    "bootstrap-xenon": "https://github.com/SistCoop/bootstrap-xenon.git#1.0.3"
+    "bootstrap-xenon": "https://github.com/SistCoop/bootstrap-xenon.git#1.0.3",
+    "keycloak": "~1.1.0"
   }
 }
