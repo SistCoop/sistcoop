@@ -10,7 +10,7 @@
     </div>
 
     <ul class="navbar-nav">
-        <li data-ng-repeat="item in menus.main" ui-route="/{{item.link}}" ui-sref-active="active" ng-class="{active: $uiRoute}">
+        <li data-ng-repeat="item in menus.main" ui-route="/{{item.link}}" ui-sref-active-eq="active" ng-class="{active: $uiRoute}">
             <a mean-token="item.link" ui-sref='{{item.link}}'>{{item.title}}</a>
         </li>
     </ul>
