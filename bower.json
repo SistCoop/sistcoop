@@ -12,6 +12,7 @@
     "angular-ui-router": "#master",
     "web-bootstrap": "./node_modules/meanio/resources/web-bootstrap.js",
     "bootstrap-xenon": "https://github.com/SistCoop/bootstrap-xenon.git#1.0.3",
-    "keycloak": "~1.1.0"
+    "keycloak": "~1.1.0",
+    "angular-ui-grid": "~3.0.0-rc.20"
   }
 }
