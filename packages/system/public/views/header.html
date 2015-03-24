@@ -1,35 +1,25 @@
 <div class="navbar-inner" data-ng-controller="HeaderController">
     <div class="navbar-brand">
         <a href="" ui-sref="home" mean-token="'site-title'" class="logo">
-            <img src="system/assets/img/xenon/logo-white-bg@2x.png" width="80" alt="" class="hidden-xs">
-            <img src="system/assets/img/xenon/logo@2x.png" width="80" alt="" class="visible-xs">
+            <img src="utils/assets/img/xenon/logo-white-bg@2x.png" width="80" alt="" class="hidden-xs">
+            <img src="utils/assets/img/xenon/logo@2x.png" width="80" alt="" class="visible-xs">
         </a>
         <a href="#" ui-sref="home" mean-token="'site-title'" data-toggle="settings-pane" data-animate="true">
             <i class="linecons-cog"></i>
         </a>
     </div>
 
-    <ul class="navbar-nav">
+   <ul class="navbar-nav">
         <li data-ng-repeat="item in menus.main" ui-route="/{{item.link}}" ui-sref-active-eq="active" ng-class="{active: $uiRoute}">
             <a mean-token="item.link" ui-sref='{{item.link}}'>{{item.title}}</a>
         </li>
     </ul>
 
-    <ul class="nav nav-userinfo navbar-right">
-        <div class="navbar-nav nav">
-            <div class="pull-right" data-ng-show="global.authenticated" mean-token-editable></div>
-            <div class="pull-right" data-ng-show="global.authenticated" mean-translate></div>
-        </div>
-        <ul class="navbar-nav nav" data-ng-hide="global.authenticated">
-            <li class="divider-vertical"></li>
-            <li>
-                <a ui-sref='auth.login'>Log In</a>
-            </li>
-        </ul>
-        <li class="dropdown user-profile" data-ng-show="global.authenticated" dropdown>
+    <ul class="nav nav-userinfo navbar-right" data-neg-controller="KeycloakController">
+        <li class="dropdown user-profile" dropdown>
             <a href="" class="dropdown-toggle" data-toggle="dropdown" dropdown-toggle>
-                <img src="system/assets/img/xenon/user-1.png" alt="user-image" class="img-circle img-inline userpic-32" width="28">
-                <span>{{global.user.name}}<i class="fa-angle-down"></i></span>
+                <img src="utils/assets/img/xenon/user-1.png" alt="user-image" class="img-circle img-inline userpic-32" width="28">
+                <span>{{keycloak.user.name}}<i class="fa-angle-down"></i></span>
             </a>
             <ul class="dropdown-menu user-profile-menu list-unstyled">
                 <li>
@@ -41,5 +31,4 @@
             </ul>
         </li>
     </ul>
-
 </div>
