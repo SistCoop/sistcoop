@@ -9,6 +9,14 @@ angular.module('mean.keycloak').controller('KeycloakController', ['$scope', 'Glo
         };
 
         $scope.keycloak = {};
-        console.log(Auth);
+        $scope.keycloak.user = {};
+        $scope.keycloak.user = Auth.authz.idToken.preferred_username;
+
+    }
+]).controller('KeycloakLogoutController', ['$scope', 'Keycloak', 'Auth',
+    function($scope, Keycloak, Auth) {
+
+        Auth.authz.logout();
+
     }
 ]);
