@@ -10,7 +10,7 @@ angular.module('mean.keycloak').controller('KeycloakController', ['$scope', 'Glo
 
         $scope.keycloak = {};
         $scope.keycloak.user = {};
-        $scope.keycloak.user = Auth.authz.idToken.preferred_username;
+        $scope.keycloak.user.name = Auth.authz.idTokenParsed.preferred_username;
 
     }
 ]).controller('KeycloakLogoutController', ['$scope', 'Keycloak', 'Auth',
